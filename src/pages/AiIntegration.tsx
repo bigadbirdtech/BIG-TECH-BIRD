@@ -86,9 +86,9 @@ export const AiIntegration: React.FC = () => {
       if (lower.includes('cost') || lower.includes('pricing') || lower.includes('price')) {
         reply = "✦ Bird AI Deployments start with a 2-week custom sprint: we ingest your company knowledge, connect your API endpoints (CRM, Slack, SMS), and deploy your dedicated agent. Let's build yours!";
       } else if (lower.includes('crm') || lower.includes('hubspot') || lower.includes('salesforce')) {
-        reply = "✦ Bird AI natively synchronizes with HubSpot, Salesforce, Notion, Supabase, and custom databases via zero-latency webhooks. Every lead and action is mirrored in real time.";
+        reply = "✦ Bird AI is built to connect to CRMs and tools like HubSpot, Salesforce, Notion and Supabase, or to your own database through webhooks. We scope each integration with you first.";
       } else {
-        reply = `✦ BIRD AI Execution: Analyzed request "${userText}". We can configure Bird AI to automate this exact workflow for your team in under 14 days.`;
+        reply = `✦ BIRD AI Execution: Analyzed request "${userText}". We can scope how Bird AI would automate this workflow for your team. Send us a message and we will take it from there.`;
       }
 
       setChatMessages((prev) => [...prev, { role: 'assistant', text: reply }]);
@@ -332,6 +332,8 @@ export const AiIntegration: React.FC = () => {
               04 Business Intel Digest
             </button>
           </div>
+
+          <p className="mb-2 font-mono text-[10px] uppercase tracking-widest text-white/40">Interactive demo: scripted examples of what Bird AI does, not a live model.</p>
 
           {/* Terminal Console Output */}
           <div className="bg-black/60 rounded-2xl border border-white/10 p-4 md:p-6 min-h-[220px] max-h-[300px] overflow-y-auto space-y-3 font-mono text-xs">

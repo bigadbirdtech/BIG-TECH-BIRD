@@ -10,7 +10,7 @@ export const SEO: React.FC<SEOProps> = ({
   description = 'Award-level Website Design, Social Media Management, and Bird AI Integration for modern businesses.',
 }) => {
   useEffect(() => {
-    document.title = `${title} — Big Tech Bird`;
+    document.title = /big tech bird/i.test(title) ? title : `${title} — Big Tech Bird`;
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute('content', description);

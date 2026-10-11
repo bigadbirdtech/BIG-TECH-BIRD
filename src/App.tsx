@@ -1,5 +1,6 @@
-﻿import React, { useState, Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { NotFound } from './pages/NotFound';
+import React, { useState, Suspense, lazy } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Preloader } from './components/Preloader';
 import { NoiseOverlay } from './components/NoiseOverlay';
 import { CustomCursor } from './components/CustomCursor';
@@ -55,7 +56,7 @@ export const App: React.FC = () => {
                   <Route path="/contact" element={<Contact />} />
                   <Route path="/terms" element={<Terms />} />
                   <Route path="/privacy" element={<PrivacyPolicy />} />
-                  <Route path="*" element={<Navigate to="/" replace />} />
+                  <Route path="*" element={<NotFound />} />
                 </Routes>
               </Suspense>
             </PageTransition>

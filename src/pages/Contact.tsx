@@ -16,11 +16,13 @@ export const Contact: React.FC = () => {
     service: 'Website Design',
     budget: '$15k - $30k',
     message: '',
-    smsConsent: true,
+    smsConsent: false, // consent must be an active choice
+    website: '', // honeypot
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const [birdOnButton, setBirdOnButton] = useState(false);
 
   // Compute dynamic form completion percentage
@@ -32,22 +34,29 @@ export const Contact: React.FC = () => {
   ].filter(Boolean).length;
   const progressPct = Math.round((filledCount / 4) * 100);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (isSubmitting) return;
     setIsSubmitting(true);
-
-    setTimeout(() => {
-      setIsSubmitting(false);
+    setError(null);
+    try {
+      const r = await fetch('/api/contact', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(formState) });
+      const j = await r.json().catch(() => ({}));
+      if (!r.ok) throw new Error(j.error || 'Something went wrong.');
       setIsSubmitted(true);
 
-      // Trigger celebratory monochrome confetti
+      // Trigger celebratory monochrome confetti (only after it really sent)
       confetti({
         particleCount: 80,
         spread: 70,
         origin: { y: 0.6 },
         colors: ['#FAF8F5', '#FFFFFF', '#E67E22'],
       });
-    }, 1200);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'We could not send that. Please email tech@bigadbird.com.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -221,29 +230,35 @@ export const Contact: React.FC = () => {
                   {/* Name Fields: First Name and Last Name */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-xs font-mono uppercase tracking-wider text-[#FAF8F5]/60 mb-2">
+                      <label className="block text-xs font-mono uppercase tracking-wider text-[#FAF8F5]/60 mb-2" htmlFor="bt-first-name">
                         First Name *
                       </label>
                       <input
+                        id="bt-first-name"
                         type="text"
                         required
                         value={formState.firstName}
                         onChange={(e) => setFormState({ ...formState, firstName: e.target.value })}
                         placeholder="e.g. Alex"
+                        maxLength={60}
+                        autoComplete="given-name"
                         className="w-full px-4 py-3.5 bg-white/5 border border-white/15 rounded-xl font-sans text-sm text-white focus:outline-none focus:border-white transition-colors"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-xs font-mono uppercase tracking-wider text-[#FAF8F5]/60 mb-2">
+                      <label className="block text-xs font-mono uppercase tracking-wider text-[#FAF8F5]/60 mb-2" htmlFor="bt-last-name">
                         Last Name *
                       </label>
                       <input
+                        id="bt-last-name"
                         type="text"
                         required
                         value={formState.lastName}
                         onChange={(e) => setFormState({ ...formState, lastName: e.target.value })}
                         placeholder="e.g. Vance"
+                        maxLength={60}
+                        autoComplete="family-name"
                         className="w-full px-4 py-3.5 bg-white/5 border border-white/15 rounded-xl font-sans text-sm text-white focus:outline-none focus:border-white transition-colors"
                       />
                     </div>
@@ -252,22 +267,25 @@ export const Contact: React.FC = () => {
                   {/* Email & Phone Number (Phone is optional) */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-xs font-mono uppercase tracking-wider text-[#FAF8F5]/60 mb-2">
+                      <label className="block text-xs font-mono uppercase tracking-wider text-[#FAF8F5]/60 mb-2" htmlFor="bt-email">
                         Work Email *
                       </label>
                       <input
+                        id="bt-email"
                         type="email"
                         required
                         value={formState.email}
                         onChange={(e) => setFormState({ ...formState, email: e.target.value })}
                         placeholder="alex@company.com"
+                        maxLength={200}
+                        autoComplete="email"
                         className="w-full px-4 py-3.5 bg-white/5 border border-white/15 rounded-xl font-sans text-sm text-white focus:outline-none focus:border-white transition-colors"
                       />
                     </div>
 
                     <div>
                       <div className="flex items-center justify-between mb-2">
-                        <label className="block text-xs font-mono uppercase tracking-wider text-[#FAF8F5]/60">
+                        <label className="block text-xs font-mono uppercase tracking-wider text-[#FAF8F5]/60" htmlFor="bt-phone">
                           Phone Number
                         </label>
                         <span className="text-[10px] font-mono text-[#FAF8F5]/40 uppercase">
@@ -275,10 +293,13 @@ export const Contact: React.FC = () => {
                         </span>
                       </div>
                       <input
+                        id="bt-phone"
                         type="tel"
                         value={formState.phone}
                         onChange={(e) => setFormState({ ...formState, phone: e.target.value })}
                         placeholder="+1 (555) 019-2834"
+                        maxLength={40}
+                        autoComplete="tel"
                         className="w-full px-4 py-3.5 bg-white/5 border border-white/15 rounded-xl font-sans text-sm text-white focus:outline-none focus:border-white transition-colors"
                       />
                     </div>
@@ -287,10 +308,11 @@ export const Contact: React.FC = () => {
                   {/* Service & Budget */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-xs font-mono uppercase tracking-wider text-[#FAF8F5]/60 mb-2">
+                      <label className="block text-xs font-mono uppercase tracking-wider text-[#FAF8F5]/60 mb-2" htmlFor="bt-service">
                         Discipline / Service *
                       </label>
                       <select
+                        id="bt-service"
                         value={formState.service}
                         onChange={(e) => setFormState({ ...formState, service: e.target.value })}
                         className="w-full px-4 py-3.5 bg-[#0A0A0A] border border-white/15 rounded-xl font-sans text-sm text-white focus:outline-none focus:border-white cursor-pointer transition-colors"
@@ -303,10 +325,11 @@ export const Contact: React.FC = () => {
                     </div>
 
                     <div>
-                      <label className="block text-xs font-mono uppercase tracking-wider text-[#FAF8F5]/60 mb-2">
+                      <label className="block text-xs font-mono uppercase tracking-wider text-[#FAF8F5]/60 mb-2" htmlFor="bt-budget">
                         Estimated Budget Tier
                       </label>
                       <select
+                        id="bt-budget"
                         value={formState.budget}
                         onChange={(e) => setFormState({ ...formState, budget: e.target.value })}
                         className="w-full px-4 py-3.5 bg-[#0A0A0A] border border-white/15 rounded-xl font-sans text-sm text-white focus:outline-none focus:border-white cursor-pointer transition-colors"
@@ -321,18 +344,22 @@ export const Contact: React.FC = () => {
 
                   {/* Message */}
                   <div>
-                    <label className="block text-xs font-mono uppercase tracking-wider text-[#FAF8F5]/60 mb-2">
+                    <label className="block text-xs font-mono uppercase tracking-wider text-[#FAF8F5]/60 mb-2" htmlFor="bt-message">
                       Project Goals & Context *
                     </label>
                     <textarea
+                        id="bt-message"
                       required
                       rows={4}
                       value={formState.message}
                       onChange={(e) => setFormState({ ...formState, message: e.target.value })}
                       placeholder="Share a link to your current website/brand, timeline, and what success looks like..."
+                      maxLength={4000}
                       className="w-full px-4 py-3.5 bg-white/5 border border-white/15 rounded-xl font-sans text-sm text-white focus:outline-none focus:border-white transition-colors"
                     />
                   </div>
+
+                  <input type="text" tabIndex={-1} autoComplete="off" aria-hidden="true" value={formState.website} onChange={(e) => setFormState({ ...formState, website: e.target.value })} className="absolute -left-[9999px] h-0 w-0 opacity-0" />
 
                   {/* Standard Form Legal & SMS Consent */}
                   <div className="flex items-start gap-3 pt-1">
@@ -358,6 +385,9 @@ export const Contact: React.FC = () => {
                       , and consent to receive occasional SMS messages from Big Tech Bird purely for project coordination and campaign check-ins. We do not use SMS for marketing or solicitation. Msg & data rates may apply. Reply STOP to cancel at any time.
                     </label>
                   </div>
+
+                  {error && <p role="alert" className="rounded-xl border border-red-400/40 bg-red-500/10 px-4 py-3 text-sm text-red-200">{error}</p>}
+
 
                   {/* =========================================================
                       SUBMIT BUTTON WITH BIRD LANDING ON IT
