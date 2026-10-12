@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { SEO } from '../components/SEO';
 import { BirdMascot } from '../components/BirdMascot';
 import { TiltCard } from '../components/TiltCard';
-import { ArrowUpRight, Mail, Clock, Globe, Sparkles } from 'lucide-react';
+import { ArrowUpRight, Mail, Phone, Clock, Globe, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import confetti from 'canvas-confetti';
 
@@ -53,7 +53,7 @@ export const Contact: React.FC = () => {
         colors: ['#FAF8F5', '#FFFFFF', '#E67E22'],
       });
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'We could not send that. Please email tech@bigadbird.com.');
+      setError(err instanceof Error ? err.message : 'We could not send that. Please email admin@bigtechbird.com or call 760-284-7665.');
     } finally {
       setIsSubmitting(false);
     }
@@ -134,10 +134,23 @@ export const Contact: React.FC = () => {
                   <div>
                     <div className="uppercase tracking-widest text-[#FAF8F5]/40 text-[10px]">Priority Inbound</div>
                     <a
-                      href="mailto:tech@bigadbird.com"
+                      href="mailto:admin@bigtechbird.com"
                       className="text-sm text-white hover:underline mt-0.5 block font-sans"
                     >
-                      tech@bigadbird.com
+                      admin@bigtechbird.com
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <Phone className="w-4 h-4 text-amber-400 mt-0.5 shrink-0" />
+                  <div>
+                    <div className="uppercase tracking-widest text-[#FAF8F5]/40 text-[10px]">Direct Line</div>
+                    <a
+                      href="tel:+17602847665"
+                      className="text-sm text-white hover:underline mt-0.5 block font-sans"
+                    >
+                      760-284-7665
                     </a>
                   </div>
                 </div>

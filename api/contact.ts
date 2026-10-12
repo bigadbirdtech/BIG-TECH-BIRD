@@ -32,7 +32,7 @@ export default async function handler(req: Req, res: Res) {
 
   const base = process.env.CRM_URL;
   const key = process.env.PORTAL_API_KEY;
-  if (!base || !key) return res.status(503).json({ error: "Our contact form is being set up. Please email tech@bigadbird.com." });
+  if (!base || !key) return res.status(503).json({ error: "Our contact form is being set up. Please email admin@bigtechbird.com or call 760-284-7665." });
 
   const phone = clip(b.phone, 40);
   const consent = b.smsConsent === true && phone ? "SMS consent given on the form." : "No SMS consent.";
@@ -53,7 +53,7 @@ export default async function handler(req: Req, res: Res) {
     if (!r.ok) throw new Error(String(r.status));
     return res.status(200).json({ ok: true });
   } catch {
-    return res.status(502).json({ error: "We couldn't send that just now. Please try again in a minute, or email tech@bigadbird.com." });
+    return res.status(502).json({ error: "We couldn't send that just now. Please try again in a minute, or email admin@bigtechbird.com or call 760-284-7665." });
   }
 }
 

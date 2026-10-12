@@ -94,7 +94,7 @@ export const PrivacyPolicy: React.FC = () => {
                 opt-in data and consent; this information will not be shared with any third parties.
               </p>
               <p className="text-xs font-mono text-[#0A0A0A]/70">
-                • <strong>Opt-Out:</strong> You may opt out of receiving SMS messages at any time by replying <code>STOP</code> to any message received, or by emailing <code>tech@bigadbird.com</code>. For help, reply <code>HELP</code>.
+                • <strong>Opt-Out:</strong> You may opt out of receiving SMS messages at any time by replying <code>STOP</code> to any message received, or by emailing <code>admin@bigtechbird.com</code>. For help, reply <code>HELP</code>.
               </p>
             </div>
           </div>
@@ -125,8 +125,12 @@ export const PrivacyPolicy: React.FC = () => {
             <p className="text-sm font-sans text-[#0A0A0A]/80 leading-relaxed">
               You retain the right to inspect, correct, export, or permanently delete any personal information we hold
               about you at any time. To submit a request, contact our data privacy officer at{' '}
-              <a href="mailto:tech@bigadbird.com" className="underline font-bold text-[#0A0A0A] hover:opacity-70">
-                tech@bigadbird.com
+              <a href="mailto:admin@bigtechbird.com" className="underline font-bold text-[#0A0A0A] hover:opacity-70">
+                admin@bigtechbird.com
+              </a>{' '}
+              or by phone at{' '}
+              <a href="tel:+17602847665" className="underline font-bold text-[#0A0A0A] hover:opacity-70">
+                760-284-7665
               </a>.
             </p>
           </div>
