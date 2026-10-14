@@ -35,7 +35,10 @@ export default async function handler(req: Req, res: Res) {
   if (!base || !key) return res.status(503).json({ error: "Our contact form is being set up. Please email admin@bigtechbird.com or call 760-284-7665." });
 
   const phone = clip(b.phone, 40);
-  const consent = b.smsConsent === true && phone ? "SMS consent given on the form." : "No SMS consent.";
+  // ponytail: same consent wording as the checkbox on src/pages/Contact.tsx; keep the two in step.
+  const consent = b.smsConsent === true && phone
+    ? 'Ticked on the form: "I agree to be contacted by call, text and email at the details I gave. Message and data rates may apply. Reply STOP to opt out."'
+    : "Consent box not ticked.";
   try {
     const r = await fetch(`${base}/api/portal/enquiry`, {
       method: "POST",
@@ -49,12 +52,14 @@ export default async function handler(req: Req, res: Res) {
         message: `${message}\n\n${consent}`,
         source: "bigtechbird.tech",
       }),
+      signal: AbortSignal.timeout(10_000),
     });
-    if (!r.ok) throw new Error(String(r.status));
-    return res.status(200).json({ ok: true });
-  } catch {
-    return res.status(502).json({ error: "We couldn't send that just now. Please try again in a minute, or email admin@bigtechbird.com or call 760-284-7665." });
+    if (r.ok) return res.status(200).json({ ok: true });
+    console.error("contact: CRM answered", r.status); // status only, never the visitor's details
+  } catch (e) {
+    console.error("contact: CRM request failed", e instanceof Error ? e.name : "unknown");
   }
+  return res.status(502).json({ error: "We couldn't send that just now. Please try again in a minute, or email admin@bigtechbird.com or call 760-284-7665." });
 }
 
 function safeParse(s: string) {

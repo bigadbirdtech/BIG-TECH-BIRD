@@ -14,7 +14,7 @@ export const Contact: React.FC = () => {
     email: '',
     phone: '',
     service: 'Website Design',
-    budget: '$15k - $30k',
+    budget: '', // no preselected tier: the visitor picks one
     message: '',
     smsConsent: false, // consent must be an active choice
     website: '', // honeypot
@@ -310,7 +310,7 @@ export const Contact: React.FC = () => {
                         type="tel"
                         value={formState.phone}
                         onChange={(e) => setFormState({ ...formState, phone: e.target.value })}
-                        placeholder="+1 (555) 019-2834"
+                        placeholder="Your phone number"
                         maxLength={40}
                         autoComplete="tel"
                         className="w-full px-4 py-3.5 bg-white/5 border border-white/15 rounded-xl font-sans text-sm text-white focus:outline-none focus:border-white transition-colors"
@@ -339,14 +339,16 @@ export const Contact: React.FC = () => {
 
                     <div>
                       <label className="block text-xs font-mono uppercase tracking-wider text-[#FAF8F5]/60 mb-2" htmlFor="bt-budget">
-                        Estimated Budget Tier
+                        Estimated Budget Tier *
                       </label>
                       <select
                         id="bt-budget"
+                        required
                         value={formState.budget}
                         onChange={(e) => setFormState({ ...formState, budget: e.target.value })}
                         className="w-full px-4 py-3.5 bg-[#0A0A0A] border border-white/15 rounded-xl font-sans text-sm text-white focus:outline-none focus:border-white cursor-pointer transition-colors"
                       >
+                        <option value="" disabled>Choose…</option>
                         <option value="$10k - $25k">$10k – $25k</option>
                         <option value="$25k - $50k">$25k – $50k</option>
                         <option value="$50k - $100k+">$50k – $100k+</option>
@@ -374,7 +376,7 @@ export const Contact: React.FC = () => {
 
                   <input type="text" tabIndex={-1} autoComplete="off" aria-hidden="true" value={formState.website} onChange={(e) => setFormState({ ...formState, website: e.target.value })} className="absolute -left-[9999px] h-0 w-0 opacity-0" />
 
-                  {/* Standard Form Legal & SMS Consent */}
+                  {/* Optional contact consent (never pre-ticked; phone only forwarded when ticked) */}
                   <div className="flex items-start gap-3 pt-1">
                     <input
                       type="checkbox"
@@ -387,15 +389,7 @@ export const Contact: React.FC = () => {
                       htmlFor="sms-consent-checkbox"
                       className="text-xs font-sans text-[#FAF8F5]/70 leading-relaxed cursor-pointer select-none"
                     >
-                      By submitting this form, you agree to our{' '}
-                      <Link to="/terms" className="underline text-white hover:opacity-80">
-                        Terms & Conditions
-                      </Link>{' '}
-                      and{' '}
-                      <Link to="/privacy" className="underline text-white hover:opacity-80">
-                        Privacy Policy
-                      </Link>
-                      , and consent to receive occasional SMS messages from Big Tech Bird purely for project coordination and campaign check-ins. We do not use SMS for marketing or solicitation. Msg & data rates may apply. Reply STOP to cancel at any time.
+                      I agree to be contacted by call, text and email at the details I gave. Message and data rates may apply. Reply STOP to opt out.
                     </label>
                   </div>
 
@@ -451,6 +445,12 @@ export const Contact: React.FC = () => {
                         )}
                       </button>
                     </div>
+
+                    <p className="mt-4 w-full text-xs font-sans text-[#FAF8F5]/60">
+                      By submitting you agree to our{' '}
+                      <Link to="/terms" className="underline text-white hover:opacity-80">Terms</Link> and{' '}
+                      <Link to="/privacy" className="underline text-white hover:opacity-80">Privacy Policy</Link>.
+                    </p>
 
                     <div className="mt-4 flex items-center justify-between w-full text-[11px] font-mono text-[#FAF8F5]/40">
                       <span>STRICT CONFIDENTIALITY NDA APPLIES</span>
