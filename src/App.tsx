@@ -18,15 +18,39 @@ const Contact = lazy(() => import('./pages/Contact').then(m => ({ default: m.Con
 const Terms = lazy(() => import('./pages/Terms').then(m => ({ default: m.Terms })));
 const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy').then(m => ({ default: m.PrivacyPolicy })));
 
+// The intro plays once per browser session; storage can throw (private mode, blocked site data), so fall back to showing it.
+const INTRO_KEY = 'btb-intro-seen';
+const introSeen = () => {
+  try {
+    return sessionStorage.getItem(INTRO_KEY) === '1';
+  } catch {
+    return false;
+  }
+};
+const markIntroSeen = () => {
+  try {
+    sessionStorage.setItem(INTRO_KEY, '1');
+  } catch {
+    // ignore: the intro just plays again next load
+  }
+};
+
 export const App: React.FC = () => {
-  const [hasLoaded, setHasLoaded] = useState(false);
+  const [hasLoaded, setHasLoaded] = useState(introSeen);
 
   return (
     <Router>
       <SmoothScroll>
         <div className="relative min-h-screen flex flex-col justify-between selection:bg-[#0A0A0A] selection:text-[#FAF8F5]">
           {/* Continuous line-drawing Preloader */}
-          {!hasLoaded && <Preloader onComplete={() => setHasLoaded(true)} />}
+          {!hasLoaded && (
+            <Preloader
+              onComplete={() => {
+                markIntroSeen();
+                setHasLoaded(true);
+              }}
+            />
+          )}
 
           {/* Film-grain noise overlay across beige backgrounds */}
           <NoiseOverlay />

@@ -9,11 +9,11 @@ export const Preloader: React.FC<PreloaderProps> = ({ onComplete }) => {
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
-    // Reveal after animation completes
+    // Short intro, never longer than 800 ms (App shows it once per browser session)
     const timer = setTimeout(() => {
       setIsVisible(false);
       if (onComplete) onComplete();
-    }, 2200);
+    }, 800);
 
     return () => clearTimeout(timer);
   }, [onComplete]);
@@ -35,7 +35,7 @@ export const Preloader: React.FC<PreloaderProps> = ({ onComplete }) => {
             <motion.div
               initial={{ scale: 0.6, opacity: 0 }}
               animate={{ scale: [0.8, 1.2, 1], opacity: [0, 0.35, 0.15] }}
-              transition={{ duration: 1.8, ease: 'easeOut' }}
+              transition={{ duration: 0.7, ease: 'easeOut' }}
               className="absolute -top-6 w-44 h-44 rounded-full bg-amber-400 blur-2xl pointer-events-none"
             />
 
@@ -43,7 +43,7 @@ export const Preloader: React.FC<PreloaderProps> = ({ onComplete }) => {
             <motion.div
               initial={{ scale: 0.7, opacity: 0, y: 25 }}
               animate={{ scale: 1, opacity: 1, y: 0 }}
-              transition={{ duration: 1.1, ease: [0.16, 1, 0.3, 1] }}
+              transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
               className="relative w-36 h-48 md:w-44 md:h-56 flex items-center justify-center"
             >
               <motion.img
@@ -66,7 +66,7 @@ export const Preloader: React.FC<PreloaderProps> = ({ onComplete }) => {
             <motion.div
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.7, duration: 0.6 }}
+              transition={{ delay: 0.15, duration: 0.4 }}
               className="mt-4 flex flex-col items-center"
             >
               <h2 className="font-serif italic text-3xl tracking-tight text-[#0A0A0A]">
@@ -83,7 +83,7 @@ export const Preloader: React.FC<PreloaderProps> = ({ onComplete }) => {
                 className="h-full bg-[#0A0A0A]"
                 initial={{ width: 0 }}
                 animate={{ width: '100%' }}
-                transition={{ duration: 1.9, ease: 'easeInOut' }}
+                transition={{ duration: 0.75, ease: 'easeInOut' }}
               />
             </div>
 
