@@ -217,7 +217,7 @@ export const AiIntegration: React.FC = () => {
               {/* Status Badge Pin */}
               <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 whitespace-nowrap bg-[#0A0A0A] text-[#FAF8F5] text-[10px] font-mono uppercase tracking-widest px-3 py-1 rounded-full shadow-lg flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-ping" />
-                <span>Agent Status: Online</span>
+                <span>Demo</span>
               </div>
             </motion.div>
 
@@ -261,7 +261,7 @@ export const AiIntegration: React.FC = () => {
                   </span>
                 </div>
                 <p className="text-xs text-[#FAF8F5]/60 font-sans mt-0.5">
-                  Click a mission to test Bird AI's live autonomous logic
+                  Click a mission to see a scripted example
                 </p>
               </div>
             </div>
@@ -439,7 +439,7 @@ export const AiIntegration: React.FC = () => {
                 </div>
 
                 <div className="pt-4 border-t border-[#0A0A0A]/10 space-y-2">
-                  <div className="text-[10px] font-mono uppercase text-[#0A0A0A]/50">Key Metric</div>
+                  <div className="text-[10px] font-mono uppercase text-[#0A0A0A]/50">Goal</div>
                   <div className="font-mono text-sm font-bold text-amber-600">{ind.impact}</div>
                 </div>
               </TiltCard>
@@ -464,14 +464,17 @@ export const AiIntegration: React.FC = () => {
               </div>
             </div>
 
-            {/* Live Metrics Grid */}
-            <div className="grid grid-cols-3 gap-6 text-center">
+            {/* Example metrics grid (illustrative, not client results) */}
+            <div className="text-center">
+            <div className="grid grid-cols-3 gap-6">
               {industries[activeIndustry].previewMetrics.map((met, mIdx) => (
                 <div key={mIdx} className="px-4 py-2 rounded-xl bg-[#FAF8F5] border border-[#0A0A0A]/5">
                   <div className="font-serif text-2xl font-bold text-[#0A0A0A]">{met.value}</div>
                   <div className="text-[10px] font-mono text-[#0A0A0A]/60 mt-0.5">{met.label}</div>
                 </div>
               ))}
+            </div>
+            <div className="mt-2 text-[10px] font-mono uppercase tracking-widest text-[#0A0A0A]/50">Example figures, not client results</div>
             </div>
           </div>
         </div>

@@ -177,7 +177,7 @@ export const WebsiteDesign: React.FC = () => {
               <ArrowUpRight className="w-4 h-4 ml-1" />
             </MagneticButton>
             <MagneticButton to="/work" variant="outline" cursorText="view">
-              View Live Case Studies
+              View Concept Work
             </MagneticButton>
           </div>
         </div>
@@ -314,8 +314,7 @@ export const WebsiteDesign: React.FC = () => {
                   </p>
 
                   <div className="pt-2 flex items-center gap-3">
-                    <button
-                      type="button"
+                    <span
                       className="px-5 py-2.5 rounded-full text-xs font-mono font-bold transition-all duration-300"
                       style={{
                         backgroundColor: wireframeManualProgress > 0.5 ? '#0A0A0A' : '#FAF8F5',
@@ -324,7 +323,7 @@ export const WebsiteDesign: React.FC = () => {
                       }}
                     >
                       {wireframeManualProgress > 0.5 ? 'Interactive Live Action' : 'Wireframe Spec'}
-                    </button>
+                    </span>
                     <span className="text-[10px] font-mono text-[#0A0A0A]/60">
                       State: {Math.round(wireframeManualProgress * 100)}% Complete
                     </span>
@@ -342,7 +341,7 @@ export const WebsiteDesign: React.FC = () => {
                   >
                     <div className="flex items-center justify-between pb-3 border-b border-[#0A0A0A]/10">
                       <span className="text-[10px] font-mono uppercase tracking-wider text-[#0A0A0A]/60">
-                        Performance Metric
+                        Example Performance Metric
                       </span>
                       <span className="text-xs font-mono font-bold">100 / 100</span>
                     </div>
@@ -569,9 +568,7 @@ export const WebsiteDesign: React.FC = () => {
               </div>
 
               <div className="flex flex-wrap items-center gap-4 sm:gap-6 text-xs font-mono pl-4 sm:pl-8 pt-4 border-t border-[#0A0A0A]/10">
-                <span className="font-bold text-[#0A0A0A]">✓ 4.8x Conversion Rate</span>
                 <span className="font-bold text-[#0A0A0A]">✓ 100% Lighthouse Score</span>
-                <span className="font-bold text-[#0A0A0A]">✓ Award Recognition</span>
               </div>
             </div>
 

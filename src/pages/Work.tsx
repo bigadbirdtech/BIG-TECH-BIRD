@@ -5,21 +5,17 @@ import { BirdMascot } from '../components/BirdMascot';
 import { MagneticButton } from '../components/MagneticButton';
 import { TiltCard } from '../components/TiltCard';
 import confetti from 'canvas-confetti';
-import { ArrowUpRight, X, CheckCircle2, Eye } from 'lucide-react';
+import { ArrowUpRight, X, Eye } from 'lucide-react';
 
 interface Project {
   id: string;
   title: string;
   client: string;
   category: 'Websites' | 'Social' | 'AI Integration';
-  year: string;
   tagline: string;
-  heroStat: string;
-  statLabel: string;
   description: string;
   challenge: string;
   solution: string;
-  results: string[];
 }
 
 export const Work: React.FC = () => {
@@ -32,126 +28,78 @@ export const Work: React.FC = () => {
       title: 'Aetheria Labs Flagship',
       client: 'Aetheria Robotics',
       category: 'Websites',
-      year: '2026',
       tagline: 'Art-directed 60fps digital flagship with headless CMS.',
-      heroStat: '100 / 100',
-      statLabel: 'Lighthouse Performance Score',
       description:
         'A minimalist, ultra-high-performance web presence engineered for an autonomous humanoid robotics firm. Fluid bezier transitions, zero layout shift, and instant edge CDN routing.',
       challenge:
         'The client needed to communicate complex engineering without feeling dry or overwhelming, while maintaining lightning speed for investor presentations globally.',
       solution:
         'We devised an editorial serif aesthetic paired with subtle line-art schematics, custom WebGL canvas simulations, and instantaneous client-side page transitions.',
-      results: [
-        '340% increase in investor deck inbound queries',
-        'Average session duration elevated from 42s to 3m 15s',
-        'Awarded Site of the Day honours across design communities',
-      ],
     },
     {
       id: 'hyperscale',
       title: 'HyperScale Brand Velocity',
       client: 'HyperScale Capital',
       category: 'Social',
-      year: '2026',
-      tagline: 'Viral organic reach engine generating 42M+ impressions.',
-      heroStat: '42.8M',
-      statLabel: 'Verified Organic Impressions',
+      tagline: 'Viral organic reach engine.',
       description:
         'A comprehensive content creation and algorithmic distribution machine across X, LinkedIn, and TikTok. Zero paid ad spend, purely high-taste editorial and short-form storytelling.',
       challenge:
         'Traditional B2B venture capital content was dull, corporate, and ignored by founders in competitive deal heats.',
       solution:
         'We designed a sharp, provocative thought leadership strategy, producing weekly cinematic video breakdowns and viral carousels that made founders crave partnership.',
-      results: [
-        '84,000+ new verified founder followers in 90 days',
-        'Deal-flow pipeline surged by 210% organically',
-        'Featured in industry media as the standout VC brand of the year',
-      ],
     },
     {
       id: 'chronos',
       title: 'Chronos Autonomous Engine',
       client: 'Chronos Logistics',
       category: 'AI Integration',
-      year: '2026',
       tagline: 'End-to-end inbound qualification & dispatch AI orchestrator.',
-      heroStat: '94%',
-      statLabel: 'Manual Workflow Hours Eliminated',
       description:
         'A bespoke multi-agent AI system directly integrated into HubSpot and internal ERP, automating freight quotation, lead qualification, and exception escalation.',
       challenge:
-        'Inbound quotation took an average of 4.2 hours per inquiry, causing 35% of high-margin contracts to leak to competitors.',
+        'Slow inbound quotation was causing high-margin contracts to leak to competitors.',
       solution:
-        'We deployed a proprietary neural orchestrator with vector memory that evaluates freight documents, calculates margin tiers, and auto-dispatches agreements in under 30 seconds.',
-      results: [
-        'Average response time reduced from 4.2 hours to 28 seconds',
-        'Gross closed deals climbed by $4.2M in first quarter post-launch',
-        'Zero human error in compliance documentation',
-      ],
+        'We deployed a proprietary neural orchestrator with vector memory that evaluates freight documents, calculates margin tiers, and auto-dispatches agreements.',
     },
     {
       id: 'komorebi',
       title: 'Komorebi Atelier',
       client: 'Komorebi Objects',
       category: 'Websites',
-      year: '2025',
       tagline: 'High-luxury e-commerce flagship with tactile physics.',
-      heroStat: '4.8x',
-      statLabel: 'Mobile Conversion Rate Surge',
       description:
         'A museum-grade digital catalog and checkout experience for artisanal ceramicists and architects. Tactile cursor physics, custom sound design, and sub-second checkout.',
       challenge:
         'High return rates and cart abandonment on mobile due to generic shop templates failing to convey physical material texture.',
       solution:
         'We photographed products in high dynamic range and built an interactive 360-degree light study inspector with tactile haptic feedback on scroll.',
-      results: [
-        'Average order value jumped from $140 to $390',
-        'Mobile cart abandonment dropped by 62%',
-        'Recognized with eCommerce Design Excellence awards',
-      ],
     },
     {
       id: 'veloce',
       title: 'Veloce Launch Cadence',
       client: 'Veloce EV',
       category: 'Social',
-      year: '2025',
       tagline: 'Exponential social pre-order blitz for luxury EV.',
-      heroStat: '18,400',
-      statLabel: 'Pre-Orders Captured in 72 Hours',
       description:
         'A teaser campaign orchestrated with micro-drops, countdown mechanics, and community-driven easter eggs that ignited massive viral momentum.',
       challenge:
         'Breaking through the saturated electric vehicle news cycle without massive traditional Super Bowl ad budgets.',
       solution:
         'We built an underground referral club with cryptographic invitations, driving exclusive teaser drops that went viral across design & tech feeds.',
-      results: [
-        '100% pre-order reservation sellout in under 72 hours',
-        'Over 1.2M user-generated shares across social channels',
-        'Acquisition cost per pre-order was $4.10 vs industry avg of $180',
-      ],
     },
     {
       id: 'neurahealth',
       title: 'NeuraHealth Predictive Intelligence',
       client: 'NeuraHealth Inc',
       category: 'AI Integration',
-      year: '2025',
       tagline: 'Predictive clinical patient triage & data synthesis agent.',
-      heroStat: '99.9%',
-      statLabel: 'Compliance & Accuracy Score',
       description:
-        'An enterprise-grade, HIPAA-compliant AI agent that digests patient symptom logs and medical histories to generate structured clinical briefings for physicians.',
+        'An AI agent that digests patient symptom logs and medical histories to generate structured clinical briefings for physicians.',
       challenge:
-        'Physicians spent 45% of consultation time typing notes into EHR systems rather than speaking directly with patients.',
+        'Physicians spent consultation time typing notes into EHR systems rather than speaking directly with patients.',
       solution:
-        'We integrated real-time speech-to-text neural summarization with strict medical terminology validators, generating flawless medical notes automatically.',
-      results: [
-        'Physician administrative time decreased by 2.5 hours daily',
-        'Patient satisfaction scores increased to 98%',
-        'Expanded from 1 pilot clinic to 24 hospital networks',
-      ],
+        'We integrated real-time speech-to-text neural summarization with strict medical terminology validators, drafting structured notes for the physician to review.',
     },
   ];
 
@@ -163,8 +111,8 @@ export const Work: React.FC = () => {
   return (
     <div className="w-full bg-[#FAF8F5] text-[#0A0A0A] overflow-hidden">
       <SEO
-        title="Selected Work — Big Tech Bird"
-        description="Inspect our archive of award-winning website flagships, viral social engines, and autonomous AI integrations."
+        title="Concept Work — Big Tech Bird"
+        description="Concept projects showing the kind of websites, social media and AI work Big Tech Bird designs. Illustrative, not client results."
       />
 
       {/* =========================================================
@@ -175,13 +123,13 @@ export const Work: React.FC = () => {
           <div>
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#0A0A0A]/20 bg-white/70 text-xs font-mono uppercase tracking-widest text-[#0A0A0A]/70 mb-4 shadow-xs">
               <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-              <span>CASE ARCHIVE // 2025 - 2026 • 6 VERIFIED FLAGSHIPS</span>
+              <span>Concept projects — illustrative, not client results</span>
             </div>
             <h1 className="font-serif italic text-5xl sm:text-7xl md:text-8xl leading-[0.95] text-[#0A0A0A] tracking-tight">
-              Selected Work.
+              Concept Work.
             </h1>
             <p className="font-sans text-sm sm:text-base text-[#0A0A0A]/70 mt-3 max-w-xl">
-              From ultra-fast robotic flagships to autonomous AI dispatch engines and multi-million-view social campaigns.
+              The companies, briefs and details below are made up to show the kind of work we design.
             </p>
           </div>
 
@@ -238,7 +186,7 @@ export const Work: React.FC = () => {
 
                   <div className="flex items-center justify-between relative z-10">
                     <span className="text-[10px] font-mono text-[#0A0A0A]/50 group-hover:text-[#FAF8F5]/60 transition-colors">
-                      {project.year} ARCHIVE
+                      CONCEPT
                     </span>
                     <BirdMascot
                       variant="flight"
@@ -252,11 +200,10 @@ export const Work: React.FC = () => {
                       whileHover={{ scale: 1.05 }}
                       className="text-4xl font-serif italic font-bold text-[#0A0A0A] group-hover:text-amber-400 transition-colors"
                     >
-                      {project.heroStat}
+                      Concept
                     </motion.div>
-                    <div className="text-[10px] font-mono uppercase tracking-wider text-[#0A0A0A]/60 group-hover:text-[#FAF8F5]/70 transition-colors mt-1 flex items-center justify-center gap-1.5">
-                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping group-hover:bg-amber-400" />
-                      {project.statLabel}
+                    <div className="text-[10px] font-mono uppercase tracking-wider text-[#0A0A0A]/60 group-hover:text-[#FAF8F5]/70 transition-colors mt-1">
+                      Illustrative project
                     </div>
                   </div>
 
@@ -321,12 +268,12 @@ export const Work: React.FC = () => {
 
               {/* Case Study Header */}
               <div className="pb-6 border-b border-[#0A0A0A]/15">
-                <div className="flex items-center gap-3 text-xs font-mono text-[#0A0A0A]/60 mb-2">
+                <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs font-mono text-[#0A0A0A]/60 mb-2">
                   <span>{selectedProject.client}</span>
                   <span>•</span>
                   <span>{selectedProject.category}</span>
                   <span>•</span>
-                  <span>{selectedProject.year}</span>
+                  <span>Concept project — illustrative, not a client result</span>
                 </div>
                 <h2 className="font-serif italic text-4xl sm:text-5xl text-[#0A0A0A]">
                   {selectedProject.title}
@@ -336,23 +283,8 @@ export const Work: React.FC = () => {
                 </p>
               </div>
 
-              {/* Stat highlight banner */}
-              <div className="my-8 bg-white border border-[#0A0A0A]/10 rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-                <div>
-                  <div className="text-xs font-mono uppercase tracking-wider text-[#0A0A0A]/50">
-                    Primary Key Metric
-                  </div>
-                  <div className="font-serif italic text-4xl sm:text-5xl font-bold text-[#0A0A0A] mt-1">
-                    {selectedProject.heroStat}
-                  </div>
-                </div>
-                <div className="text-xs font-mono sm:text-right text-[#0A0A0A]/70 max-w-xs">
-                  {selectedProject.statLabel}
-                </div>
-              </div>
-
               {/* Challenge & Solution */}
-              <div className="space-y-6 text-sm font-sans">
+              <div className="mt-8 space-y-6 text-sm font-sans">
                 <div>
                   <h4 className="font-mono text-xs uppercase tracking-widest text-[#0A0A0A]/50 mb-2">
                     The Strategic Bottleneck
@@ -370,26 +302,12 @@ export const Work: React.FC = () => {
                     {selectedProject.solution}
                   </p>
                 </div>
-
-                <div>
-                  <h4 className="font-mono text-xs uppercase tracking-widest text-[#0A0A0A]/50 mb-3">
-                    Quantified Outcomes
-                  </h4>
-                  <ul className="space-y-2 font-mono text-xs">
-                    {selectedProject.results.map((res, rIdx) => (
-                      <li key={rIdx} className="flex items-center gap-2 text-[#0A0A0A]">
-                        <CheckCircle2 className="w-4 h-4 text-[#0A0A0A]" />
-                        <span>{res}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
               </div>
 
               {/* Action Buttons */}
               <div className="mt-8 pt-6 border-t border-[#0A0A0A]/15 flex flex-wrap items-center justify-between gap-4">
                 <span className="text-xs font-mono text-[#0A0A0A]/50">
-                  Ready for similar transformative outcomes?
+                  Want something like this?
                 </span>
                 <MagneticButton
                   to="/contact"

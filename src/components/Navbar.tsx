@@ -244,7 +244,7 @@ export const Navbar: React.FC = () => {
                     className="font-serif italic text-4xl text-[#FAF8F5] no-underline hover:text-white"
                     onClick={() => setMobileMenuOpen(false)}
                   >
-                    Selected Work
+                    Concept Work
                   </Link>
                 </div>
 

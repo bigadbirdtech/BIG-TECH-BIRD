@@ -73,7 +73,7 @@ export const Contact: React.FC = () => {
         {/* Top Header Badge */}
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/20 bg-white/5 text-xs font-mono uppercase tracking-widest text-[#FAF8F5]/70 mb-6">
           <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-          <span>INQUIRIES OPEN // 24-HOUR RESPONSE GUARANTEE</span>
+          <span>INQUIRIES OPEN // WE AIM TO REPLY WITHIN ONE BUSINESS DAY</span>
         </div>
 
         {/* Giant Inverted Headline */}
@@ -108,7 +108,7 @@ export const Contact: React.FC = () => {
                 </span>
                 <span className="text-emerald-400 font-bold flex items-center gap-1">
                   <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping" />
-                  Available 24/7
+                  Inquiries Open
                 </span>
               </div>
 
@@ -119,8 +119,8 @@ export const Contact: React.FC = () => {
                   <div className="text-emerald-400 font-bold mt-0.5">ONLINE</div>
                 </div>
                 <div className="p-2.5 rounded-xl bg-white/5 border border-white/5">
-                  <div className="text-[10px] text-[#FAF8F5]/50">SLA</div>
-                  <div className="text-white font-bold mt-0.5">&lt; 24 HRS</div>
+                  <div className="text-[10px] text-[#FAF8F5]/50">REPLY AIM</div>
+                  <div className="text-white font-bold mt-0.5">1 BUS. DAY</div>
                 </div>
                 <div className="p-2.5 rounded-xl bg-white/5 border border-white/5">
                   <div className="text-[10px] text-[#FAF8F5]/50">CHANNELS</div>
@@ -158,9 +158,9 @@ export const Contact: React.FC = () => {
                 <div className="flex items-start gap-3">
                   <Clock className="w-4 h-4 text-emerald-400 mt-0.5 shrink-0" />
                   <div>
-                    <div className="uppercase tracking-widest text-[#FAF8F5]/40 text-[10px]">Response Guarantee</div>
+                    <div className="uppercase tracking-widest text-[#FAF8F5]/40 text-[10px]">Response Time</div>
                     <div className="text-xs text-white/90 font-sans mt-0.5">
-                      Direct reply from a director under 24 hours.
+                      We aim to reply within one business day.
                     </div>
                   </div>
                 </div>
@@ -453,8 +453,7 @@ export const Contact: React.FC = () => {
                     </p>
 
                     <div className="mt-4 flex items-center justify-between w-full text-[11px] font-mono text-[#FAF8F5]/40">
-                      <span>STRICT CONFIDENTIALITY NDA APPLIES</span>
-                      <span>RESPONSE UNDER 24H</span>
+                      <span>WE AIM TO REPLY WITHIN ONE BUSINESS DAY</span>
                     </div>
                   </div>
                 </motion.form>

@@ -100,14 +100,6 @@ export const SocialMedia: React.FC = () => {
       comments: '1.2K',
     },
     {
-      author: 'Big Tech Bird Dispatch',
-      handle: '@bigtechbird',
-      tag: 'CASE STUDY',
-      content: 'How we generated 18.4M organic impressions in 90 days with zero ad budget for our portfolio brand.',
-      likes: '48.9K',
-      comments: '2.8K',
-    },
-    {
       author: 'AI Insight',
       handle: '@bigtechbird',
       tag: 'AI WORKFLOW',
@@ -177,7 +169,7 @@ export const SocialMedia: React.FC = () => {
               <ArrowUpRight className="w-4 h-4 ml-1" />
             </MagneticButton>
             <MagneticButton to="/work" variant="outline" cursorText="view">
-              View Social Wins
+              View Concept Work
             </MagneticButton>
           </div>
         </div>
@@ -204,6 +196,9 @@ export const SocialMedia: React.FC = () => {
             <span className="text-[10px] font-mono uppercase tracking-widest text-[#0A0A0A]/50 mt-2 bg-white px-3 py-1 rounded-full border border-[#0A0A0A]/10 shadow-xs">
               ✦ Click Bird to Trigger Heart Burst
             </span>
+            <span className="mt-1 text-[10px] font-mono uppercase tracking-widest text-[#0A0A0A]/50">
+              Example figures, not client results
+            </span>
           </div>
 
           {/* Floating White Post Cards Bursting Outward (with Mouse Parallax) */}
@@ -221,7 +216,7 @@ export const SocialMedia: React.FC = () => {
               <span className="w-2 h-2 rounded-full bg-emerald-500" />
             </div>
             <p className="text-xs font-serif italic text-[#0A0A0A] mt-2">
-              "How Big Tech Bird scaled from zero to 42M impressions."
+              "Most B2B websites look like tax software. Design for emotion."
             </p>
             <div className="mt-3 flex items-center justify-between text-xs font-mono text-[#0A0A0A]">
               <span className="flex items-center gap-1 font-bold">
@@ -370,7 +365,7 @@ export const SocialMedia: React.FC = () => {
       <section className="py-28 md:py-36 px-6 md:px-12 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left: Phone Mockup with Auto-Scrolling Feed */}
-          <div className="lg:col-span-5 flex justify-center">
+          <div className="lg:col-span-5 flex flex-col items-center gap-3">
             <TiltCard maxTilt={12} className="w-72 sm:w-80 bg-white border-2 border-[#0A0A0A] rounded-[42px] shadow-2xl p-2.5 overflow-hidden">
               {/* Inner phone shell */}
               <div className="bg-[#FAF8F5]/40 rounded-[34px] border border-[#0A0A0A]/10 overflow-hidden flex flex-col h-[520px]">
@@ -438,6 +433,7 @@ export const SocialMedia: React.FC = () => {
                 </div>
               </div>
             </TiltCard>
+            <span className="text-[10px] font-mono uppercase tracking-widest text-[#0A0A0A]/50">Example feed, illustrative figures</span>
           </div>
 
           {/* Right: Animated Growth Chart */}
@@ -449,8 +445,7 @@ export const SocialMedia: React.FC = () => {
               Exponential organic curves. No bot farms.
             </h2>
             <p className="text-sm font-sans text-[#0A0A0A]/70 mt-4 leading-relaxed max-w-xl">
-              By combining high-end editorial aesthetics with rigorous short-form algorithmic hooks,
-              our partner accounts consistently outpace traditional competitors by 400% in organic impressions.
+              We combine high-end editorial aesthetics with rigorous short-form algorithmic hooks.
             </p>
 
             {/* SVG Line Chart that draws on scroll */}
@@ -459,10 +454,10 @@ export const SocialMedia: React.FC = () => {
                 <div>
                   <div className="text-xs font-mono font-bold text-[#0A0A0A] flex items-center gap-2">
                     <TrendingUp className="w-4 h-4 text-emerald-600" />
-                    <span>6-MONTH AGGREGATE REACH TRAJECTORY</span>
+                    <span>EXAMPLE • 6-MONTH REACH TRAJECTORY</span>
                   </div>
                   <div className="text-[10px] font-mono text-[#0A0A0A]/60 mt-0.5">
-                    Hover milestone pins to inspect viral inflection points
+                    Illustrative figures, not client results. Hover the pins to inspect.
                   </div>
                 </div>
 
@@ -696,7 +691,7 @@ export const SocialMedia: React.FC = () => {
           </div>
 
           <div className="mt-8 text-center text-xs font-mono text-[#FAF8F5]/40">
-            SHOWING ACTIVE CALENDAR ITERATION • CLICK ANY SLOT TO INSPECT CREATIVE BRIEF
+            EXAMPLE CALENDAR • CLICK ANY SLOT TO INSPECT CREATIVE BRIEF
           </div>
         </div>
 

@@ -31,7 +31,7 @@ export const Home: React.FC = () => {
   const [isHovered, setIsHovered] = useState(false);
 
   // Kinetic Rotating Words State
-  const rotatingWords = ['AWARD-WINNING', 'AUTONOMOUS', 'HYPER-SCALED', 'UNFAIR'];
+  const rotatingWords = ['AUTONOMOUS', 'HYPER-SCALED', 'UNFAIR'];
   const [currentWordIdx, setCurrentWordIdx] = useState(0);
 
   // Soundwave visualizer bar amplitudes
@@ -221,14 +221,6 @@ export const Home: React.FC = () => {
             </span>
           </div>
 
-          <div className="hidden lg:flex items-center gap-3 text-[10px] text-[#0A0A0A]/50">
-            <span className="px-2 py-0.5 rounded-full bg-white/80 border border-[#0A0A0A]/10">
-              CORE: BIRD AI v4.2
-            </span>
-            <span>LATENCY: 0.18s</span>
-            <span>•</span>
-            <span>AUTONOMOUS ENGINE: ONLINE</span>
-          </div>
 
           <div className="flex items-center gap-2">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
@@ -606,7 +598,7 @@ export const Home: React.FC = () => {
                           <span className="text-[10px] font-mono font-bold">@bigtechbird</span>
                         </div>
                         <span className="text-[8px] font-mono text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded">
-                          VIRAL
+                          EXAMPLE
                         </span>
                       </div>
                       <div className="h-8 bg-[#FAF8F5] rounded my-2 flex items-center justify-center px-2">
@@ -630,7 +622,7 @@ export const Home: React.FC = () => {
                     <div className="flex flex-col justify-between h-full">
                       <div className="flex items-center gap-1.5">
                         <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                        <span className="text-[10px] font-mono text-amber-400 font-bold">BIRD AI CORE</span>
+                        <span className="text-[10px] font-mono text-amber-400 font-bold">BIRD AI · EXAMPLE</span>
                       </div>
                       <div>
                         <div className="text-[9px] font-mono text-white/50">LEAD QUALIFIED</div>
@@ -725,7 +717,7 @@ export const Home: React.FC = () => {
               <div className="w-full bg-black/60 border border-white/10 rounded-xl p-3 text-left font-mono text-[11px] space-y-1.5">
                 <div className="text-amber-400 font-bold flex items-center justify-between">
                   <span>● BIRD AI AGENT</span>
-                  <span className="text-[9px] text-white/50">99.8% PRECISION</span>
+                  <span className="text-[9px] text-white/50">DEMO</span>
                 </div>
                 <div className="text-white/80">
                   {homeSimMode === 'qualify' && '✓ Parsing inbound lead budget: $50K verified. Reserved on Calendly.'}

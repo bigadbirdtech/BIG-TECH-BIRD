@@ -5,6 +5,9 @@ import { BirdMascot } from './BirdMascot';
 import { ArrowUpRight } from 'lucide-react';
 import confetti from 'canvas-confetti';
 
+// Real profile URLs only, e.g. ['LinkedIn', 'https://www.linkedin.com/company/...']. Empty = section hidden.
+const socials: [label: string, href: string][] = [];
+
 export const Footer: React.FC = () => {
   const [isHoveringBird, setIsHoveringBird] = useState(false);
 
@@ -19,7 +22,7 @@ export const Footer: React.FC = () => {
 
   return (
     <footer className="bg-[#0A0A0A] text-[#FAF8F5] pt-0 pb-12 border-t border-white/10 relative overflow-hidden">
-      {/* Animated Live Status Marquee */}
+      {/* Animated services marquee */}
       <div className="border-b border-white/10 bg-white/[0.02] py-3 overflow-hidden select-none">
         <motion.div
           animate={{ x: ['0%', '-50%'] }}
@@ -28,20 +31,13 @@ export const Footer: React.FC = () => {
         >
           {[...Array(2)].map((_, i) => (
             <div key={i} className="flex items-center gap-8">
-              <span className="flex items-center gap-2 text-emerald-400 font-bold">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping" />
-                SYSTEM STATUS: 100% OPERATIONAL
-              </span>
+              <span className="text-white font-bold">WEBSITE DESIGN</span>
               <span>•</span>
-              <span>60 FPS HARDWARE ACCELERATED</span>
+              <span className="text-white font-bold">SOCIAL MEDIA</span>
               <span>•</span>
-              <span className="text-amber-400 font-bold">BIRD AI CORE V2.4 ONLINE</span>
+              <span className="text-amber-400 font-bold">AI INTEGRATION</span>
               <span>•</span>
-              <span>24-HOUR DISPATCH GUARANTEE</span>
-              <span>•</span>
-              <span className="text-white font-bold">CURRENTLY ACCEPTING Q3/Q4 PARTNERS</span>
-              <span>•</span>
-              <span>EDITORIAL ALABASTER #FAF8F5</span>
+              <span>WE AIM TO REPLY WITHIN ONE BUSINESS DAY</span>
               <span>•</span>
             </div>
           ))}
@@ -71,11 +67,6 @@ export const Footer: React.FC = () => {
                 Crafting next-generation web flagships, viral organic growth engines, and
                 business-transforming AI systems.
               </p>
-            </div>
-
-            <div className="mt-8 flex items-center gap-3 text-xs font-mono text-[#FAF8F5]/40">
-              <span className="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-              <span>CURRENTLY ACCEPTING Q3/Q4 PARTNERS</span>
             </div>
           </div>
 
@@ -123,7 +114,7 @@ export const Footer: React.FC = () => {
             <ul className="space-y-3 text-sm font-sans">
               <li>
                 <Link to="/work" className="text-[#FAF8F5]/80 hover:text-white transition-colors no-underline">
-                  Case Studies
+                  Concept Work
                 </Link>
               </li>
               <li>
@@ -158,43 +149,27 @@ export const Footer: React.FC = () => {
 
           {/* Socials & Flapping Bird Mascot */}
           <div className="md:col-span-2 flex flex-col justify-between">
-            <div>
-              <h4 className="text-xs font-mono uppercase tracking-widest text-[#FAF8F5]/40 mb-4">
-                Network
-              </h4>
-              <div className="space-y-2 text-sm font-sans">
-                <div>
-                  <a
-                    href="https://twitter.com"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-[#FAF8F5]/80 hover:text-white transition-colors no-underline flex items-center gap-1.5"
-                  >
-                    X / Twitter <ArrowUpRight className="w-3 h-3 text-[#FAF8F5]/40" />
-                  </a>
-                </div>
-                <div>
-                  <a
-                    href="https://linkedin.com"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-[#FAF8F5]/80 hover:text-white transition-colors no-underline flex items-center gap-1.5"
-                  >
-                    LinkedIn <ArrowUpRight className="w-3 h-3 text-[#FAF8F5]/40" />
-                  </a>
-                </div>
-                <div>
-                  <a
-                    href="https://instagram.com"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-[#FAF8F5]/80 hover:text-white transition-colors no-underline flex items-center gap-1.5"
-                  >
-                    Instagram <ArrowUpRight className="w-3 h-3 text-[#FAF8F5]/40" />
-                  </a>
+            {socials.length > 0 && (
+              <div>
+                <h4 className="text-xs font-mono uppercase tracking-widest text-[#FAF8F5]/40 mb-4">
+                  Network
+                </h4>
+                <div className="space-y-2 text-sm font-sans">
+                  {socials.map(([label, href]) => (
+                    <div key={href}>
+                      <a
+                        href={href}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-[#FAF8F5]/80 hover:text-white transition-colors no-underline flex items-center gap-1.5"
+                      >
+                        {label} <ArrowUpRight className="w-3 h-3 text-[#FAF8F5]/40" />
+                      </a>
+                    </div>
+                  ))}
                 </div>
               </div>
-            </div>
+            )}
 
             {/* Small flapping bird mascot in bottom corner */}
             <div
@@ -233,15 +208,7 @@ export const Footer: React.FC = () => {
             <Link to="/privacy" className="hover:text-[#FAF8F5] transition-colors underline underline-offset-2">
               Privacy Policy
             </Link>
-          </div>
-          <div className="flex items-center gap-4">
-            <span>BEIGE #FAF8F5</span>
-            <span>•</span>
-            <span>BLACK #0A0A0A</span>
-            <span>•</span>
-            <span>WHITE #FFFFFF</span>
-          </div>
-        </div>
+          </div>        </div>
       </div>
     </footer>
   );
