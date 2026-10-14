@@ -15,6 +15,13 @@ export const SEO: React.FC<SEOProps> = ({
     if (metaDescription) {
       metaDescription.setAttribute('content', description);
     }
+    let canonical = document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.rel = 'canonical';
+      document.head.appendChild(canonical);
+    }
+    canonical.href = `https://bigtechbird.tech${window.location.pathname}`;
   }, [title, description]);
 
   return null;

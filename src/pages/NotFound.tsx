@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { SEO } from '../components/SEO';
 
 export const NotFound: React.FC = () => {
-  // tell search engines this URL is not a page (the host answers 200 for every path on a single-page app)
+  // tell search engines this URL is not a page (Vercel also answers unknown paths with dist/404.html and a 404 status)
   useEffect(() => {
     const m = document.createElement('meta');
     m.name = 'robots';
