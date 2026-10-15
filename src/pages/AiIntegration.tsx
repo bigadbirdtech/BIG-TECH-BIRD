@@ -29,7 +29,7 @@ export const AiIntegration: React.FC = () => {
   const [chatMessages, setChatMessages] = useState([
     {
       role: 'assistant',
-      text: "⚡ BIRD AI ONLINE: I run Big Tech Bird's operations, lead qualification, and 24/7 support. Click any mission chip above or ask me how I integrate into your business!",
+      text: "⚡ BIRD AI ONLINE: I assist with lead qualification and workflow automation. Click any mission chip above or ask me how I integrate into your business!",
     },
   ]);
   const [inputValue, setInputValue] = useState('');
@@ -459,7 +459,7 @@ export const AiIntegration: React.FC = () => {
                   {industries[activeIndustry].title} Automation Architecture
                 </h4>
                 <p className="text-xs font-mono text-[#0A0A0A]/60 mt-0.5">
-                  Pre-configured pipeline ready to connect to your domain in 14 days
+                  Pre-configured pipeline engineered for rapid domain integration
                 </p>
               </div>
             </div>
@@ -644,7 +644,7 @@ export const AiIntegration: React.FC = () => {
           </h2>
 
           <p className="font-sans text-base text-[#FAF8F5]/70 max-w-xl mt-6 leading-relaxed">
-            Tell us your operational bottlenecks. In two weeks, your custom Bird AI agent will be running circles around your competition.
+            Tell us your operational bottlenecks. We will train and deploy a custom Bird AI agent tailored to automate your business workflows.
           </p>
 
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">

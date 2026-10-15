@@ -148,7 +148,7 @@ export const WebsiteDesign: React.FC = () => {
   return (
     <div ref={containerRef} className="w-full bg-[#FAF8F5] text-[#0A0A0A] overflow-hidden">
       <SEO
-        title="Website Design — Award-Level Web Engineering"
+        title="Website Design — Bespoke Web Engineering"
         description="Bespoke websites designed for high conversion, 60fps interaction, and undeniable cultural presence."
       />
 
@@ -446,7 +446,7 @@ export const WebsiteDesign: React.FC = () => {
               Pixel-perfect across every screen.
             </h2>
             <p className="text-sm font-sans text-[#0A0A0A]/70 mt-4">
-              Over 68% of executive traffic begins on mobile devices. We ensure your brand looks as commanding on an iPhone as it does on a Pro Display XDR.
+              With executive traffic predominantly beginning on mobile devices, we ensure your brand looks as commanding on an iPhone as it does on a Pro Display XDR.
             </p>
           </div>
 
@@ -568,7 +568,7 @@ export const WebsiteDesign: React.FC = () => {
               </div>
 
               <div className="flex flex-wrap items-center gap-4 sm:gap-6 text-xs font-mono pl-4 sm:pl-8 pt-4 border-t border-[#0A0A0A]/10">
-                <span className="font-bold text-[#0A0A0A]">✓ 100% Lighthouse Score</span>
+                <span className="font-bold text-[#0A0A0A]">✓ Top-Tier Lighthouse Performance</span>
               </div>
             </div>
 

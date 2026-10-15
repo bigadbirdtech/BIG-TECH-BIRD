@@ -143,7 +143,7 @@ export const Home: React.FC = () => {
     {
       num: '02',
       title: 'Design & Code',
-      lead: 'Award-Level Craft',
+      lead: 'Bespoke Digital Craft',
       desc: 'Bespoke layouts, 60fps animations, and custom vector motion.',
       icon: Layers,
     },
@@ -801,7 +801,7 @@ export const Home: React.FC = () => {
           </h2>
 
           <p className="font-sans text-base text-[#FAF8F5]/70 max-w-xl mt-6 leading-relaxed">
-            Whether you need a flagship website, viral distribution, or an autonomous Bird AI deployment—we deliver award-level results.
+            Whether you need a flagship website, viral distribution, or an autonomous Bird AI deployment—we deliver exceptional results.
           </p>
 
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">

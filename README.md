@@ -1,6 +1,6 @@
-# Big Tech Bird — Award-Level Digital Studio Website
+# Big Tech Bird — Digital Studio Website
 
-An award-level marketing website and interactive portfolio for **"Big Tech Bird"**, an independent digital studio offering three core disciplines:
+A modern marketing website and interactive portfolio for **"Big Tech Bird"**, an independent digital studio offering three core disciplines:
 1. **Website Design** (`/website-design`)
 2. **Social Media Management** (`/social-media`)
 3. **AI Integration for Businesses** (`/ai-integration`)
