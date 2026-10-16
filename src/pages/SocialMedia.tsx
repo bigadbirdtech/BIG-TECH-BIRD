@@ -126,7 +126,7 @@ export const SocialMedia: React.FC = () => {
     { day: 'Fri 06', format: 'Interactive Poll', topic: 'Tool Stack 2026', status: 'Published', views: '45K' },
     { day: 'Sat 07', format: 'Story Drop', topic: 'Client Victory', status: 'Scheduled', views: '—' },
     { day: 'Mon 09', format: 'Carousel', topic: 'Conversion Teardown', status: 'Scheduled', views: '—' },
-    { day: 'Tue 10', format: 'Shorts / Reel', topic: 'The Flying Bird', status: 'Scheduled', views: '—' },
+    { day: 'Tue 10', format: 'Shorts / Reel', topic: 'The Flying B.I.R.D.', status: 'Scheduled', views: '—' },
     { day: 'Wed 11', format: 'Case Study Drop', topic: 'Fintech Rebrand', status: 'Scheduled', views: '—' },
     { day: 'Thu 12', format: 'Manifesto Piece', topic: 'The Anti-Template', status: 'Scheduled', views: '—' },
     { day: 'Fri 13', format: 'Meme / Culture', topic: 'Figma Archetypes', status: 'Scheduled', views: '—' },
@@ -194,7 +194,7 @@ export const SocialMedia: React.FC = () => {
               <BirdMascot variant="flight" className="w-full h-full filter drop-shadow-[0_12px_28px_rgba(230,126,34,0.2)]" />
             </motion.div>
             <span className="text-[10px] font-mono uppercase tracking-widest text-[#0A0A0A]/50 mt-2 bg-white px-3 py-1 rounded-full border border-[#0A0A0A]/10 shadow-xs">
-              ✦ Click Bird to Trigger Heart Burst
+              ✦ Click B.I.R.D. to Trigger Heart Burst
             </span>
             <span className="mt-1 text-[10px] font-mono uppercase tracking-widest text-[#0A0A0A]/50">
               Example figures, not client results

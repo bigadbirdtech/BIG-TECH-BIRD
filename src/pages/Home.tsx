@@ -37,7 +37,7 @@ export const Home: React.FC = () => {
   // Soundwave visualizer bar amplitudes
   const [waveAmplitudes, setWaveAmplitudes] = useState([8, 16, 24, 12, 28, 18, 14, 22]);
 
-  // Bird AI Spotlight live simulation on Home
+  // B.I.R.D. AI Spotlight live simulation on Home
   const [homeSimMode, setHomeSimMode] = useState<'qualify' | 'crm' | 'chat'>('qualify');
   const [socialLikes, setSocialLikes] = useState(18400);
 
@@ -123,10 +123,10 @@ export const Home: React.FC = () => {
     },
     {
       id: '03',
-      title: 'Bird AI Integration',
+      title: 'B.I.R.D. AI Integration',
       path: '/ai-integration',
       tagline: 'Proprietary Autonomous Agent',
-      description: 'Meet Bird AI: our in-house agent trained to qualify leads, automate CRM ops, and handle client support 24/7.',
+      description: 'Meet B.I.R.D. AI: our in-house agent trained to qualify leads, automate CRM ops, and handle client support 24/7.',
       icon: Cpu,
       previewType: 'ai',
     },
@@ -149,7 +149,7 @@ export const Home: React.FC = () => {
     },
     {
       num: '03',
-      title: 'Automate With Bird AI',
+      title: 'Automate With B.I.R.D. AI',
       lead: 'Intelligent Scale',
       desc: 'Plugging our autonomous agent into your CRM, SMS & sales funnels.',
       icon: Zap,
@@ -166,8 +166,8 @@ export const Home: React.FC = () => {
   return (
     <div className="w-full bg-[#FAF8F5] text-[#0A0A0A] overflow-hidden select-none">
       <SEO
-        title="Big Tech Bird — Websites, Social Media & Bird AI"
-        description="We build the web, grow your brand, and deploy Bird AI to make your business smarter."
+        title="Big Tech Bird — Websites, Social Media & B.I.R.D. AI"
+        description="We build the web, grow your brand, and deploy B.I.R.D. AI to make your business smarter."
       />
 
       {/* =========================================================
@@ -294,7 +294,7 @@ export const Home: React.FC = () => {
                   transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
                   className="font-serif italic text-5xl sm:text-6xl md:text-7xl lg:text-[5.4vw] leading-[0.94] tracking-tight font-normal text-[#0A0A0A]"
                 >
-                  and deploy <span className="text-amber-600 underline decoration-amber-500/40 underline-offset-8">Bird AI</span>.
+                  and deploy <span className="text-amber-600 underline decoration-amber-500/40 underline-offset-8">B.I.R.D. AI</span>.
                 </motion.h1>
 
                 {/* Live Soundwave Frequency Equalizer */}
@@ -324,7 +324,7 @@ export const Home: React.FC = () => {
                 <ArrowUpRight className="w-4 h-4 ml-1" />
               </MagneticButton>
               <MagneticButton to="/ai-integration" variant="outline" cursorText="agent">
-                Test Drive Bird AI
+                Test Drive B.I.R.D. AI
               </MagneticButton>
             </div>
           </div>
@@ -397,7 +397,7 @@ export const Home: React.FC = () => {
                   <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
                   <div className="flex flex-col">
                     <span className="text-[9px] font-mono font-bold text-[#0A0A0A] leading-tight">
-                      BIRD AI AGENT
+                      B.I.R.D. AI AGENT
                     </span>
                     <span className="text-[8px] font-mono text-[#0A0A0A]/50 leading-tight">
                       Tracking Cursor: 3D Spatial
@@ -412,7 +412,7 @@ export const Home: React.FC = () => {
                   className="absolute -bottom-4 left-1/2 -translate-x-1/2 whitespace-nowrap bg-[#0A0A0A] text-[#FAF8F5] text-[10px] font-mono uppercase tracking-widest px-4 py-1.5 rounded-full shadow-2xl border border-white/20 flex items-center gap-2"
                 >
                   <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-ping" />
-                  <span>Click Bird for Energy Burst</span>
+                  <span>Click B.I.R.D. for Energy Burst</span>
                 </motion.div>
               </motion.div>
             </div>
@@ -462,7 +462,7 @@ export const Home: React.FC = () => {
                 <Cpu className="w-4 h-4" />
               </div>
               <div>
-                <div className="text-xs font-mono font-bold text-[#0A0A0A]">03 BIRD AI AGENT</div>
+                <div className="text-xs font-mono font-bold text-[#0A0A0A]">03 B.I.R.D. AI AGENT</div>
                 <div className="text-[10px] font-mono text-amber-700 font-bold">Autonomous CRM & Ops</div>
               </div>
             </div>
@@ -488,7 +488,7 @@ export const Home: React.FC = () => {
                 <span className="mx-4 text-xs not-italic text-amber-400">✦</span>
                 <span>SOCIAL MEDIA</span>
                 <span className="mx-4 text-xs not-italic text-amber-400">✦</span>
-                <span>BIRD AI AGENT</span>
+                <span>B.I.R.D. AI AGENT</span>
                 <span className="mx-4 text-xs not-italic text-amber-400">✦</span>
                 <span>AUTONOMOUS OPERATIONS</span>
                 <span className="mx-4 text-xs not-italic text-amber-400">✦</span>
@@ -622,7 +622,7 @@ export const Home: React.FC = () => {
                     <div className="flex flex-col justify-between h-full">
                       <div className="flex items-center gap-1.5">
                         <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                        <span className="text-[10px] font-mono text-amber-400 font-bold">BIRD AI · EXAMPLE</span>
+                        <span className="text-[10px] font-mono text-amber-400 font-bold">B.I.R.D. AI · EXAMPLE</span>
                       </div>
                       <div>
                         <div className="text-[9px] font-mono text-white/50">LEAD QUALIFIED</div>
@@ -647,7 +647,7 @@ export const Home: React.FC = () => {
       </section>
 
       {/* =========================================================
-          SPECIAL FEATURE SPOTLIGHT: BIRD AI AGENT (PROPRIETARY)
+          SPECIAL FEATURE SPOTLIGHT: B.I.R.D. AI AGENT (PROPRIETARY)
           ========================================================= */}
       <section className="bg-white py-24 md:py-32 px-6 md:px-12 border-y border-[#0A0A0A]/10">
         <div className="max-w-6xl mx-auto">
@@ -663,13 +663,13 @@ export const Home: React.FC = () => {
               </div>
 
               <h2 className="font-serif italic text-4xl sm:text-5xl md:text-6xl text-white leading-tight">
-                We built Bird AI to scale our company.
+                We built B.I.R.D. AI to scale our company.
                 <br />
                 <span className="text-amber-400">Now we integrate him into yours.</span>
               </h2>
 
               <p className="font-sans text-sm md:text-base text-[#FAF8F5]/70 mt-4 leading-relaxed">
-                Bird AI handles our inbound client qualification, automates CRM workflows, sends SMS check-ins, and manages calendar booking 24/7. We train and deploy customized versions into your business.
+                B.I.R.D. AI handles our inbound client qualification, automates CRM workflows, sends SMS check-ins, and manages calendar booking 24/7. We train and deploy customized versions into your business.
               </p>
 
               {/* Action Simulation Chips */}
@@ -702,7 +702,7 @@ export const Home: React.FC = () => {
 
               <div className="mt-10">
                 <MagneticButton to="/ai-integration" variant="beige" cursorText="deploy">
-                  Explore Full Bird AI Engine
+                  Explore Full B.I.R.D. AI Engine
                   <ArrowUpRight className="w-4 h-4 ml-1" />
                 </MagneticButton>
               </div>
@@ -716,7 +716,7 @@ export const Home: React.FC = () => {
 
               <div className="w-full bg-black/60 border border-white/10 rounded-xl p-3 text-left font-mono text-[11px] space-y-1.5">
                 <div className="text-amber-400 font-bold flex items-center justify-between">
-                  <span>● BIRD AI AGENT</span>
+                  <span>● B.I.R.D. AI AGENT</span>
                   <span className="text-[9px] text-white/50">DEMO</span>
                 </div>
                 <div className="text-white/80">
@@ -801,7 +801,7 @@ export const Home: React.FC = () => {
           </h2>
 
           <p className="font-sans text-base text-[#FAF8F5]/70 max-w-xl mt-6 leading-relaxed">
-            Whether you need a flagship website, viral distribution, or an autonomous Bird AI deployment—we deliver exceptional results.
+            Whether you need a flagship website, viral distribution, or an autonomous B.I.R.D. AI deployment—we deliver exceptional results.
           </p>
 
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
@@ -810,7 +810,7 @@ export const Home: React.FC = () => {
               <ArrowUpRight className="w-4 h-4 ml-1" />
             </MagneticButton>
             <MagneticButton to="/ai-integration" variant="outline-white" cursorText="agent">
-              Meet Bird AI
+              Meet B.I.R.D. AI
             </MagneticButton>
           </div>
         </div>

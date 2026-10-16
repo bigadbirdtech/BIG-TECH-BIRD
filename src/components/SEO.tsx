@@ -7,7 +7,7 @@ interface SEOProps {
 
 export const SEO: React.FC<SEOProps> = ({
   title,
-  description = 'Bespoke Website Design, Social Media Management, and Bird AI Integration for modern businesses.',
+  description = 'Bespoke Website Design, Social Media Management, and B.I.R.D. AI Integration for modern businesses.',
 }) => {
   useEffect(() => {
     document.title = /big tech bird/i.test(title) ? title : `${title} — Big Tech Bird`;

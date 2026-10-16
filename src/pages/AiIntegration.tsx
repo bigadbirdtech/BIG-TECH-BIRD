@@ -29,7 +29,7 @@ export const AiIntegration: React.FC = () => {
   const [chatMessages, setChatMessages] = useState([
     {
       role: 'assistant',
-      text: "⚡ BIRD AI ONLINE: I assist with lead qualification and workflow automation. Click any mission chip above or ask me how I integrate into your business!",
+      text: "⚡ B.I.R.D. AI ONLINE: I assist with lead qualification and workflow automation. Click any mission chip above or ask me how I integrate into your business!",
     },
   ]);
   const [inputValue, setInputValue] = useState('');
@@ -84,11 +84,11 @@ export const AiIntegration: React.FC = () => {
       let reply = '';
       const lower = userText.toLowerCase();
       if (lower.includes('cost') || lower.includes('pricing') || lower.includes('price')) {
-        reply = "✦ Bird AI Deployments start with a 2-week custom sprint: we ingest your company knowledge, connect your API endpoints (CRM, Slack, SMS), and deploy your dedicated agent. Let's build yours!";
+        reply = "✦ B.I.R.D. AI Deployments start with a 2-week custom sprint: we ingest your company knowledge, connect your API endpoints (CRM, Slack, SMS), and deploy your dedicated agent. Let's build yours!";
       } else if (lower.includes('crm') || lower.includes('hubspot') || lower.includes('salesforce')) {
-        reply = "✦ Bird AI is built to connect to CRMs and tools like HubSpot, Salesforce, Notion and Supabase, or to your own database through webhooks. We scope each integration with you first.";
+        reply = "✦ B.I.R.D. AI is built to connect to CRMs and tools like HubSpot, Salesforce, Notion and Supabase, or to your own database through webhooks. We scope each integration with you first.";
       } else {
-        reply = `✦ BIRD AI Execution: Analyzed request "${userText}". We can scope how Bird AI would automate this workflow for your team. Send us a message and we will take it from there.`;
+        reply = `✦ B.I.R.D. AI Execution: Analyzed request "${userText}". We can scope how B.I.R.D. AI would automate this workflow for your team. Send us a message and we will take it from there.`;
       }
 
       setChatMessages((prev) => [...prev, { role: 'assistant', text: reply }]);
@@ -96,7 +96,7 @@ export const AiIntegration: React.FC = () => {
     }, 900);
   };
 
-  // Industries Bird AI deploys into
+  // Industries B.I.R.D. AI deploys into
   const industries = [
     {
       id: 'real-estate',
@@ -104,7 +104,7 @@ export const AiIntegration: React.FC = () => {
       icon: Building2,
       badge: 'PRE-VETTING & BOOKINGS',
       impact: '100% Leads Responded In < 60s',
-      description: 'Bird AI chats with buyers, qualifies net-worth, answers property specs, and locks in private showings automatically.',
+      description: 'B.I.R.D. AI chats with buyers, qualifies net-worth, answers property specs, and locks in private showings automatically.',
       previewMetrics: [
         { label: 'Avg Inbound Response', value: '18 sec' },
         { label: 'Qualified Showings', value: '+340%' },
@@ -155,12 +155,12 @@ export const AiIntegration: React.FC = () => {
   return (
     <div className="w-full bg-[#FAF8F5] text-[#0A0A0A] overflow-hidden">
       <SEO
-        title="Bird AI — Autonomous AI Agent Integration"
-        description="Meet Bird AI: our proprietary in-house autonomous agent. We build, train, and deploy custom Bird AI engines for modern businesses."
+        title="B.I.R.D. AI — Autonomous AI Agent Integration"
+        description="Meet B.I.R.D. AI: our proprietary in-house autonomous agent. We build, train, and deploy custom B.I.R.D. AI engines for modern businesses."
       />
 
       {/* =========================================================
-          HERO SECTION: MEET BIRD AI (STAR OF THE SHOW)
+          HERO SECTION: MEET B.I.R.D. AI (STAR OF THE SHOW)
           ========================================================= */}
       <section className="relative pt-32 md:pt-40 pb-20 px-6 md:px-12 max-w-7xl mx-auto">
         {/* Subtle Ambient Glow */}
@@ -177,7 +177,7 @@ export const AiIntegration: React.FC = () => {
 
           {/* Big Editorial Headline */}
           <h1 className="font-serif italic text-6xl sm:text-7xl md:text-8xl lg:text-9xl tracking-tight leading-[0.92] text-[#0A0A0A]">
-            Meet Bird AI.
+            Meet B.I.R.D. AI.
           </h1>
 
           <p className="font-serif text-2xl sm:text-3xl md:text-4xl text-[#0A0A0A]/80 mt-4 max-w-3xl leading-snug">
@@ -241,7 +241,7 @@ export const AiIntegration: React.FC = () => {
       </section>
 
       {/* =========================================================
-          INTERACTIVE BIRD AI COMMAND STATION (HANDS-ON SIMULATION)
+          INTERACTIVE B.I.R.D. AI COMMAND STATION (HANDS-ON SIMULATION)
           ========================================================= */}
       <section className="py-20 px-6 md:px-12 max-w-6xl mx-auto">
         <div className="bg-[#0A0A0A] text-[#FAF8F5] rounded-3xl p-6 md:p-10 shadow-2xl border border-white/10 relative overflow-hidden">
@@ -254,7 +254,7 @@ export const AiIntegration: React.FC = () => {
               <div>
                 <div className="flex items-center gap-2">
                   <span className="font-mono text-xs font-bold uppercase tracking-widest text-amber-400">
-                    BIRD AI COMMAND STATION
+                    B.I.R.D. AI COMMAND STATION
                   </span>
                   <span className="px-1.5 py-0.5 rounded bg-white/10 text-[9px] font-mono text-white/70">
                     v4.2 PROPRIETARY
@@ -333,7 +333,7 @@ export const AiIntegration: React.FC = () => {
             </button>
           </div>
 
-          <p className="mb-2 font-mono text-[10px] uppercase tracking-widest text-white/40">Interactive demo: scripted examples of what Bird AI does, not a live model.</p>
+          <p className="mb-2 font-mono text-[10px] uppercase tracking-widest text-white/40">Interactive demo: scripted examples of what B.I.R.D. AI does, not a live model.</p>
 
           {/* Terminal Console Output */}
           <div className="bg-black/60 rounded-2xl border border-white/10 p-4 md:p-6 min-h-[220px] max-h-[300px] overflow-y-auto space-y-3 font-mono text-xs">
@@ -349,7 +349,7 @@ export const AiIntegration: React.FC = () => {
                   }`}
                 >
                   <span className="text-white/40 select-none">
-                    {msg.role === 'user' ? 'YOU >' : 'BIRD >'}
+                    {msg.role === 'user' ? 'YOU >' : 'B.I.R.D. >'}
                   </span>
                   <span>{msg.text}</span>
                 </motion.div>
@@ -357,7 +357,7 @@ export const AiIntegration: React.FC = () => {
             </AnimatePresence>
             {isTyping && (
               <div className="flex items-center gap-2 text-amber-400 text-xs">
-                <span>BIRD &gt;</span>
+                <span>B.I.R.D. &gt;</span>
                 <span className="animate-pulse">Thinking and querying tool pipelines...</span>
               </div>
             )}
@@ -369,7 +369,7 @@ export const AiIntegration: React.FC = () => {
               type="text"
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
-              placeholder="Ask Bird AI anything (e.g. 'Can you automate my WhatsApp leads?')"
+              placeholder="Ask B.I.R.D. AI anything (e.g. 'Can you automate my WhatsApp leads?')"
               className="flex-1 bg-white/5 border border-white/15 rounded-xl px-4 py-3 text-xs font-mono text-[#FAF8F5] placeholder:text-white/40 focus:outline-none focus:border-amber-400"
             />
             <button
@@ -385,7 +385,7 @@ export const AiIntegration: React.FC = () => {
       </section>
 
       {/* =========================================================
-          HOW BIRD AI INTEGRATES INTO ANY BUSINESS IDEA
+          HOW B.I.R.D. AI INTEGRATES INTO ANY BUSINESS IDEA
           ========================================================= */}
       <section className="py-24 px-6 md:px-12 max-w-7xl mx-auto border-t border-[#0A0A0A]/10">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
@@ -398,7 +398,7 @@ export const AiIntegration: React.FC = () => {
             </h2>
           </div>
           <p className="text-sm font-sans text-[#0A0A0A]/70 max-w-md">
-            We don't hand you generic ChatGPT wrappers. We configure Bird AI's memory, tools, and API webhooks specifically around your business bottlenecks.
+            We don't hand you generic ChatGPT wrappers. We configure B.I.R.D. AI's memory, tools, and API webhooks specifically around your business bottlenecks.
           </p>
         </div>
 
@@ -561,7 +561,7 @@ export const AiIntegration: React.FC = () => {
                   02
                 </span>
                 <span className="text-[10px] font-mono uppercase tracking-widest text-amber-900 bg-amber-200/80 px-2 py-0.5 rounded-full font-bold">
-                  BIRD AI CORE
+                  B.I.R.D. AI CORE
                 </span>
               </div>
               <h4 className="font-serif italic text-2xl text-[#0A0A0A] mb-2">Neural Extraction</h4>
@@ -640,16 +640,16 @@ export const AiIntegration: React.FC = () => {
           </div>
 
           <h2 className="font-serif italic text-5xl sm:text-6xl md:text-7xl leading-tight">
-            Ready to deploy Bird AI into your business?
+            Ready to deploy B.I.R.D. AI into your business?
           </h2>
 
           <p className="font-sans text-base text-[#FAF8F5]/70 max-w-xl mt-6 leading-relaxed">
-            Tell us your operational bottlenecks. We will train and deploy a custom Bird AI agent tailored to automate your business workflows.
+            Tell us your operational bottlenecks. We will train and deploy a custom B.I.R.D. AI agent tailored to automate your business workflows.
           </p>
 
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
             <MagneticButton to="/contact" variant="beige" cursorText="deploy">
-              Deploy Your Bird AI Agent
+              Deploy Your B.I.R.D. AI Agent
               <ArrowUpRight className="w-4 h-4 ml-1" />
             </MagneticButton>
             <MagneticButton to="/work" variant="outline-white" cursorText="view">
