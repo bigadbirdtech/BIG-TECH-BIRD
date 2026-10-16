@@ -53,7 +53,7 @@ export const Contact: React.FC = () => {
         colors: ['#FAF8F5', '#FFFFFF', '#E67E22'],
       });
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'We could not send that. Please email admin@bigtechbird.com or call 760-284-7665.');
+      setError(err instanceof Error ? err.message : 'We could not send that. Please email contact@bigadbird.com or call 760-284-7665.');
     } finally {
       setIsSubmitting(false);
     }
@@ -134,10 +134,10 @@ export const Contact: React.FC = () => {
                   <div>
                     <div className="uppercase tracking-widest text-[#FAF8F5]/40 text-[10px]">Priority Inbound</div>
                     <a
-                      href="mailto:admin@bigtechbird.com"
+                      href="mailto:contact@bigadbird.com"
                       className="text-sm text-white hover:underline mt-0.5 block font-sans"
                     >
-                      admin@bigtechbird.com
+                      contact@bigadbird.com
                     </a>
                   </div>
                 </div>

@@ -32,7 +32,7 @@ export default async function handler(req: Req, res: Res) {
 
   const base = process.env.CRM_URL;
   const key = process.env.PORTAL_API_KEY;
-  if (!base || !key) return res.status(503).json({ error: "Our contact form is being set up. Please email admin@bigtechbird.com or call 760-284-7665." });
+  if (!base || !key) return res.status(503).json({ error: "Our contact form is being set up. Please email contact@bigadbird.com or call 760-284-7665." });
 
   const phone = clip(b.phone, 40);
   // ponytail: same consent wording as the checkbox on src/pages/Contact.tsx; keep the two in step.
@@ -59,7 +59,7 @@ export default async function handler(req: Req, res: Res) {
   } catch (e) {
     console.error("contact: CRM request failed", e instanceof Error ? e.name : "unknown");
   }
-  return res.status(502).json({ error: "We couldn't send that just now. Please try again in a minute, or email admin@bigtechbird.com or call 760-284-7665." });
+  return res.status(502).json({ error: "We couldn't send that just now. Please try again in a minute, or email contact@bigadbird.com or call 760-284-7665." });
 }
 
 function safeParse(s: string) {

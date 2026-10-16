@@ -97,7 +97,7 @@ export const Terms: React.FC = () => {
               <p className="text-xs font-mono text-[#0A0A0A]/70">
                 • <strong>Frequency:</strong> Varies based on project activity, typically 1 to 4 operational check-ins per month during active delivery.<br />
                 • <strong>Rates:</strong> Standard message and data rates may apply depending on your mobile carrier.<br />
-                • <strong>Opt-Out:</strong> You may opt out of SMS messages at any time by replying <code>STOP</code> to any message received, or by emailing <code>admin@bigtechbird.com</code>. For assistance, reply <code>HELP</code>.
+                • <strong>Opt-Out:</strong> You may opt out of SMS messages at any time by replying <code>STOP</code> to any message received, or by emailing <code>contact@bigadbird.com</code>. For assistance, reply <code>HELP</code>.
               </p>
             </div>
           </div>
